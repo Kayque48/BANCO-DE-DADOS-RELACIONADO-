@@ -25,7 +25,7 @@
 
     if ($conn->query($sql) === TRUE) {
         echo "Dados atualizados com sucesso!";
-        echo "<br><a href='index.html'>Voltar</a>";
+        echo "<br><a href='cadastro.html'>Voltar</a>";
     } else {
         echo "Erro: " . $conn->error;
     }
