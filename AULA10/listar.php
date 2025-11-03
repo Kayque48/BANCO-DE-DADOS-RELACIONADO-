@@ -29,6 +29,7 @@
         <td>R$ {$row['PRECO']}</td>
         <td>{$row['QUANTIDADE']}</td>
         <td><a href='editar.php?id={$row['ID_LIVRO']}'>Editar</a></td>
+        <td><a href='deletar.php?id={$row['ID_LIVRO']}  '>Deletar</a></td>
         </tr>";
     }
 

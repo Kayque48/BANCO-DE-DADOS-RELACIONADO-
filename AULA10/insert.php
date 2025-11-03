@@ -1,18 +1,19 @@
 <?php
 
-   $id = $_POST['id_livro'];
-    $titulo = $_POST['titulo'];
-    $genero = $_POST['genero'];
-    $autor = $_POST['autor'];
-    $status = $_POST['lstatus'];
-    $editora = $_POST['editora'];
-    $ano = $_POST['ano_lancamento'];
-    $preco = $_POST['preco'];
-    $quantidade = $_POST['quantidade'];
-
     require_once ('dbConnect.php');
 
-    $sql = "INSERT INTO livraria (TITULO, GENERO AUTOR, LSTATUS, EDITORA, ANO_LANCAMENTO, PRECO, QUANTIDADE) VALUES ('$titulo', '$genero','$autor', '$satus', '$editora', '$ano', '$preco', '$quantidade')";
+    $id = $_POST['ID_LIVRO'];
+    $titulo = $_POST['TITULO'];
+    $genero = $_POST['GENERO'];
+    $autor = $_POST['AUTOR'];
+    $status = $_POST['LSTATUS'];
+    $editora = $_POST['EDITORA'];
+    $ano = $_POST['ANO_LANCAMENTO'];
+    $preco = $_POST['PRECO'];
+    $quantidade = $_POST['QUANTIDADE'];
+
+
+    $sql = "INSERT INTO livros (TITULO, GENERO AUTOR, LSTATUS, EDITORA, ANO_LANCAMENTO, PRECO, QUANTIDADE) VALUES ('$titulo', '$genero','$autor', '$status', '$editora', '$ano', '$preco', '$quantidade')";
     if ($conn->query($sql) === TRUE) {
         echo "Dados salvos com sucesso!";
     } else {
