@@ -7,7 +7,7 @@
     $autor= $_POST['AUTOR'];
     $status = $_POST['LSTATUS'];
     $editora = $_POST['EDITORA'];
-    $ano = $_POST['ANO_LANCAMENTO'];
+    $ano = $_POST['ANO_LANCAMENTO']; 
     $preco = $_POST['PRECO'];
     $quantidade = $_POST['QUANTIDADE'];
 
