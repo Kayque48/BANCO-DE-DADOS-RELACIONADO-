@@ -3,18 +3,19 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-
+// Conexão com o banco de dados (seu dbConnect.php precisa ter a configuração correta)
 require_once '../../config/dbConnect.php';
 
 // Verifica se os dados foram enviados corretamente
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nome = $_POST['nome_cliente'];
-    $telefone = $_POST['telefone'];
-    $email = $_POST['email'];
-    $endereco = $_POST['endereco'];
+    // Recebe os dados do formulário
+    $nome = $_POST['NOME_CLIENTE'];
+    $telefone = $_POST['TELEFONE_CLIENTE']; // Alterado para 'TELEFONE_CLIENTE'
+    $email = $_POST['EMAIL'];
+    $endereco = $_POST['ENDERECO'];
 
     // Prepara a consulta SQL com placeholders para evitar SQL injection
-    $sql = "INSERT INTO db_oficina (NOME_CLIENTE, TELEFONE, EMAIL, ENDERECO) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO CLIENTES (NOME_CLIENTE, TELEFONE, EMAIL, ENDERECO) VALUES (?, ?, ?, ?)";
     
     // Prepara a declaração
     if ($stmt = $conn->prepare($sql)) {

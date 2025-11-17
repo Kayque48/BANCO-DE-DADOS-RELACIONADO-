@@ -1,6 +1,6 @@
 <?php
 
-    require_once('/../config/dbConnect.php');
+    require_once __DIR__ . '/../../config/dbConnect.php';
     $result = $conn->query('SELECT * FROM clientes');
 
     echo "<h2>Clientes Cadastrados</h2>";
@@ -16,12 +16,12 @@
       while ($row = $result->fetch_assoc()) {
         echo "<tr>
             <td>{$row['ID_CLIENTE']}</td>
-            <td>{$row['NOME']}</td>
+            <td>{$row['NOME_CLIENTE']}</td>
             <td>{$row['TELEFONE']}</td>
             <td>{$row['EMAIL']}</td>
             <td>{$row['ENDERECO']}</td>
-            <td><a href='editarCliente.php?id={$row['ID_CLIENTE']}'>Editar</a></td>
-            <td><a href='deletarCliente.php?id={$row['ID_CLIENTE']}  '>Deletar</a></td>
+            <td><a href='editarClient.php?id={$row['ID_CLIENTE']}'>Editar</a></td>
+            <td><a href='deletarClient.php?id={$row['ID_CLIENTE']}  '>Deletar</a></td>
             </tr>";
       }
 

@@ -1,13 +1,13 @@
 <?php
 
-    require_once('dbConnect.php');
+    require_once __DIR__ . 'src/models/dbConnect.php';
 
     $id = $_GET['id'];
     $result = $conn->query('SELECT * FROM clientes WHERE id_cliente ='. $id);
     $row = $result->fetch_assoc();
 ?>
 
-<form action="atualizar.php" method="POST">
+<form action="atualizarClient.php" method="POST">
     <input type="hidden" name="id" value="<?php echo $row['ID_CLIENTE']; ?>">
     Título: <input type="text" name="nome_cliente" value="<?php echo $row['NOME_CLIENTE']; ?>"><br>
     Email: <input type="text" name="email" value="<?php echo $row['EMAIL']; ?>"><br>
