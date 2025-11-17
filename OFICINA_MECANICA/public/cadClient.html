@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficina do Kayque - Cadastro de Cliente</title>
+    <link rel="stylesheet" href="css/cadStyles.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Cadastro de Cliente</h1>
+        <form id="form-cadastro" action="../src/models/insertClient.php" method="post">
+            <div class="form-group">
+                <label for="NOME_CLIENTE">Nome:</label>
+                <input type="text" name="NOME_CLIENTE" id="NOME_CLIENTE" required>
+            </div>
+            <div class="form-group">
+                <label for="TELEFONE_CLIENTE">Telefone:</label>
+                <input type="text" name="TELEFONE_CLIENTE" id="TELEFONE_CLIENTE" required>
+            </div>
+            <div class="form-group">
+                <label for="EMAIL">Email:</label>
+                <input type="email" name="EMAIL" id="EMAIL" required>
+            </div>
+            <div class="form-group">
+                <label for="ENDERECO">Endereço:</label>
+                <input type="text" name="ENDERECO" id="ENDERECO" required>
+            </div>
+            <div class="form-group">    
+                <button type="submit">Cadastrar Cliente</button>
+            </div>
+        </form>
+        <div id="form-feedback" class="hidden"></div>
+    </div>
+
+    <script src="cadScript.js"></script>
+</body>
+</html>
